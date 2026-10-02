@@ -1,0 +1,76 @@
+# ============= INPAINTING GENERATION INPUTS ============= #
+
+01_inpainting_generation/input_images/*
+!01_inpainting_generation/input_images/.gitkeep
+
+01_inpainting_generation/config_and_utilities/*
+!01_inpainting_generation/config_and_utilities/.gitkeep
+!01_inpainting_generation/config_and_utilities/clean_fooocus_output.py
+!01_inpainting_generation/config_and_utilities/empty_mask_fixer.py
+!01_inpainting_generation/config_and_utilities/text_file_generator.py
+
+# Exclude the weights, they must be downloaded manually and positioned in this folder
+weights/*
+!weights/.gitkeep
+
+
+# ============= DATASET ============= #
+# Datasets of inpainted images and masks.They are too heavy to be passed through git
+# It's possible to download the datasets running the dedicated script inside the dataset folder
+dataset/*
+!dataset/.gitkeep
+!dataset/download_flickr30k.py
+!dataset/download_floreview.py
+!dataset/download_vision.py
+!dataset/download_sagi.py
+!dataset/split_sagi.py
+
+
+# ============= GENERIC ============= #
+
+test_images/*
+!test_images/.gitkeep
+
+results/*
+!results/.gitkeep
+
+predicted_masks/*
+!predicted_masks/.gitkeep
+
+# Exclude all .txt files globally EXCEPT the requirements files (in the requirements folder)
+*.txt
+!requirements/
+!requirements/*.txt
+
+# Remove the vscode settings folder
+.vscode/
+
+# Remove saved model checkpoints and csv files for metrics
+models/checkpoints/
+
+# Python system exclusions
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.env
+*.pt
+*.pth
+
+
+# Ignore all testing files whatever their name is
+*testing.py
+*testing.ipynb
+*quick_fix.py
+
+# Exclude files ending with copy.py since are probably test or duplicates.
+*copy.py
+
+# Exclude fuse model approach for the moment as it needs to be polished
+02_inpainting_detection/3_dino_val_mask_extraction.py
+02_inpainting_detection/3_trini_val_mask_extraction.py
+02_inpainting_detection/4_fusion_dino_trini.py

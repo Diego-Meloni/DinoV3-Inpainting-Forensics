@@ -1,0 +1,21 @@
+# ==========================================
+# AMBIENTE CONSIGLIATO: Python 3.10.20
+# ==========================================
+
+# conda create -n dinolizer_env python=3.10.20
+# conda activate dinolizer_env
+
+# Note: Install PyTorch (CUDA/CPU) separately before using this file
+# Example:
+# python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+# python -m pip install -r requirements/requirements_dinolizer.txt
+
+transformers=5.8.0
+matplotlib=3.10.9
+numpy=2.2.6
+tqdm=4.67.3
+pillow=12.1.1
+accelerate=1.13.0
+
+# lightning-utilities=0.15.3
+torchmetrics=1.9.0

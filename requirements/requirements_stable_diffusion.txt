@@ -1,0 +1,21 @@
+# ==========================================
+# AMBIENTE CONSIGLIATO: Python 3.11
+# ==========================================
+
+# conda create -n st_diff_env python=3.11
+# conda activate st_diff_env
+# cd C:\Users\utente\Projects\IdentifAI_Stage\Beyond-the-Brush
+
+# Note: Install PyTorch (CUDA/CPU) separately before using this file
+# Example:
+# python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+# python -m pip install -r requirements/requirements_stable_diffusion.txt
+
+accelerate>=0.26.0
+diffusers==0.27.0
+Pillow
+safetensors
+tqdm
+transformers==4.38.0
+numpy<2.0.0
+huggingface_hub<0.26.0
